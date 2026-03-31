@@ -1,0 +1,82 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1abc9c, #2c3e50);
+}
+
+/* Container */
+.register-container {
+    width: 380px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.logo {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-box {
+    margin-bottom: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Register Button */
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #2c3e50;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #1abc9c;
+    color: white;
+}
+
+/* Login text */
+.login-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,90 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+    background: #f4f6f8;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #2c3e50;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.username {
+    font-size: 16px;
+}
+
+.cart {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Inventory Section */
+.inventory {
+    padding: 80px 60px;
+}
+
+/* Cards Container (Grid Layout) */
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Button wrapper (full clickable card) */
+.card-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 50px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Text */
+.card h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.card p {
+    font-size: 18px;
+}
