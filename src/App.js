@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import LandingPage from "./Pages/Landing_Page";
+import ManagerLogin from "./Pages/Manager_login";
+import ManagerSignup from "./Pages/Manager_signup";
+import Dashboard from "./Pages/Dashboard";
+import Categories from "./Pages/Categories";
+import AddProduct from "./Pages/Add_Product";
+import ManageProducts from "./Pages/Manage_Products";
+import ViewOrders from "./Pages/View_Orders";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<ManagerLogin />} />
+        <Route path="/signup" element={<ManagerSignup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/products" element={<ManageProducts />} />
+        <Route path="/orders" element={<ViewOrders />} />
+      </Routes>
+    </Router>
   );
 }
 
