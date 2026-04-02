@@ -1,3 +1,5 @@
+
+```markdown
 # OrderNest – Retail Ordering Platform
 
 OrderNest is a full-stack retail ordering platform developed for the **HCL Hackathon – Code Catalyst**.
@@ -69,6 +71,7 @@ The system should provide:
 
 ## System Architecture
 
+```
 
 Frontend (React)
 ↓
@@ -78,6 +81,7 @@ Backend (Spring Boot)
 ↓
 Database (MySQL)
 
+```
 
 ---
 
@@ -105,13 +109,15 @@ Database (MySQL)
 
 ## Project Structure
 
+```
 
 HCL_Hackathon_code_catalyst
 │
-├── ordernest-ui # React Frontend
-├── order_nest # Spring Boot Backend
+├── ordernest-ui      # React Frontend
+├── order_nest        # Spring Boot Backend
 └── README.md
 
+```
 
 ---
 
@@ -203,15 +209,17 @@ The application uses **MySQL** for persistent data storage.
 
 ## Entity Relationships
 
+```
 
-Users 1 ──── N Orders
-Orders 1 ──── N OrderItems
-Products 1 ──── N OrderItems
-Products N ──── 1 Categories
-Products N ──── 1 Brands
-Users 1 ──── N Cart
-Products 1 ──── N Cart
+Users        1 ──── N Orders
+Orders       1 ──── N OrderItems
+Products     1 ──── N OrderItems
+Products     N ──── 1 Categories
+Products     N ──── 1 Brands
+Users        1 ──── N Cart
+Products     1 ──── N Cart
 
+```
 
 ---
 
@@ -219,15 +227,19 @@ Products 1 ──── N Cart
 
 ### Clone the Repository
 
+```
 
-git clone https://github.com/Srinidhi945/HCL_Hackathon_code_catalyst.git
+git clone [https://github.com/Srinidhi945/HCL_Hackathon_code_catalyst.git](https://github.com/Srinidhi945/HCL_Hackathon_code_catalyst.git)
 
+```
 
 Navigate to the project directory:
 
+```
 
 cd HCL_Hackathon_code_catalyst
 
+```
 
 ---
 
@@ -235,27 +247,35 @@ cd HCL_Hackathon_code_catalyst
 
 Navigate to the backend folder:
 
+```
 
 cd order_nest
 
+```
 
 Run the Spring Boot application:
 
+```
 
 ./mvnw spring-boot:run
 
+```
 
 Backend will start at:
 
+```
 
-http://localhost:8080
+[http://localhost:8080](http://localhost:8080)
 
+```
 
 Swagger API documentation:
 
+```
 
-http://localhost:8080/swagger-ui/index.html
+[http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
+```
 
 ---
 
@@ -263,27 +283,35 @@ http://localhost:8080/swagger-ui/index.html
 
 Navigate to the frontend folder:
 
+```
 
 cd ordernest-ui
 
+```
 
 Install dependencies:
 
+```
 
 npm install
 
+```
 
 Run the application:
 
+```
 
 npm start
 
+```
 
 Frontend will start at:
 
+```
 
-http://localhost:3000
+[http://localhost:3000](http://localhost:3000)
 
+```
 
 ---
 
@@ -325,3 +353,7 @@ A demo video of the application will be added here.
 ## License
 
 This project was developed as part of the **HCL Hackathon – Code Catalyst**.
+```
+
+
+If you want, I can also show you **2 small sections that instantly make your README look like a top GitHub project** (most hackathon teams forget them but judges notice immediately).
