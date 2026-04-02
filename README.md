@@ -1,79 +1,74 @@
 ```markdown
-# 🍕 OrderNest – Retail Ordering Platform
+# OrderNest – Retail Ordering Platform
 
-OrderNest is a **full-stack retail ordering platform** developed for the **HCL Hackathon – Code Catalyst**.
+OrderNest is a full-stack retail ordering platform developed for the **HCL Hackathon – Code Catalyst**.
 
-The platform enables customers to **browse menu items, place orders, and manage their purchase history**, while managers can **manage products, brands, categories, and monitor incoming orders** through an administrative dashboard.
+The platform enables customers to browse menu items, place orders, and manage their purchase history. Managers can manage products, brands, categories, and monitor incoming orders through an administrative dashboard.
 
 ---
 
-# 📌 Problem Statement
+# Problem Statement
 
 **Retail Ordering Website**
 
-Enable customers to browse, order, and receive items such as **Pizza, Cold Drinks, and Breads** seamlessly while ensuring **secure and efficient operations**.
+Develop a platform that allows customers to browse, order, and receive items such as **Pizza, Cold Drinks, and Breads** while ensuring secure and efficient operations.
 
-The platform should provide:
+The system should provide:
 
-- A centralized portal to manage brands, categories, and products.
-- Seamless customer ordering experience.
-- Inventory updates upon order confirmation.
-- Secure APIs for authentication and order management.
-
----
-
-# 🚀 Features Implemented
-
-## 👤 Customer Features
-
-- User Signup and Login
-- Browse menu items by categories
-- Product search and filtering
-- Product cards with images and details
-- Add items to cart with quantity selection
-- Interactive cart drawer
-- Checkout and place orders
-- Order history page
-- Quick reorder functionality
-- Profile management (edit user details)
+- A centralized portal to manage brands, categories, and products  
+- A seamless customer ordering experience  
+- Inventory updates upon order confirmation  
+- Secure APIs for authentication and order management  
 
 ---
 
-## 🛠 Manager / Admin Features
+# Features
 
-- Manager login with role-based access
-- Dashboard analytics showing:
+## Customer Features
 
-  - Total Orders
-  - Total Revenue
-  - Total Products
-  - Total Categories
-
-- Product Management
-
-  - Add products
-  - Delete products
-  - Manage inventory
-
-- Brand Management
-
-  - Add brands
-  - Delete brands
-
-- Category Management
-
-  - Add categories
-  - Delete categories
-
-- Order Monitoring
-
-  - View all orders
-  - Orders sorted by latest
-  - View order item details
+- User registration and authentication  
+- Browse menu items by categories  
+- Product search and filtering  
+- Product cards with images and details  
+- Add items to cart with quantity selection  
+- Interactive cart drawer  
+- Checkout and order placement  
+- Order history tracking  
+- Quick reorder functionality  
+- Profile management  
 
 ---
 
-# 🏗 System Architecture
+## Manager / Admin Features
+
+- Manager login with role-based access  
+- Dashboard analytics displaying:
+  - Total orders  
+  - Total revenue  
+  - Total products  
+  - Total categories  
+
+### Product Management
+- Add products  
+- Delete products  
+- Manage product inventory  
+
+### Brand Management
+- Add brands  
+- Delete brands  
+
+### Category Management
+- Add categories  
+- Delete categories  
+
+### Order Monitoring
+- View all orders  
+- Orders sorted by latest  
+- View order item details  
+
+---
+
+# System Architecture
 
 ```
 
@@ -89,47 +84,45 @@ Database (MySQL)
 
 ---
 
-# 🧰 Tech Stack
+# Technology Stack
 
 ## Frontend
-- React.js
-- Axios
-- React Router
-- Custom CSS Styling
+- React.js  
+- Axios  
+- React Router  
+- Custom CSS  
 
 ## Backend
-- Spring Boot
-- REST APIs
-- Maven
+- Spring Boot  
+- REST APIs  
+- Maven  
 
 ## Database
-- MySQL
+- MySQL  
 
 ## Tools
-- Swagger (API documentation)
-- GitHub (Version control)
+- Swagger (API documentation)  
+- GitHub (version control)
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 
 HCL_Hackathon_code_catalyst
 │
-├── ordernest-ui        → React Frontend
-│
-├── order_nest          → Spring Boot Backend
-│
-├── README.md
+├── ordernest-ui      # React frontend
+├── order_nest        # Spring Boot backend
+└── README.md
 
 ```
 
 ---
 
-# 🗄 Database Schema
+# Database Schema
 
-The application uses **MySQL** for data persistence.
+The application uses **MySQL** for persistent data storage.
 
 ## Users Table
 
@@ -213,25 +206,25 @@ The application uses **MySQL** for data persistence.
 
 ---
 
-## Relationships
+## Entity Relationships
 
 ```
 
-Users 1 ──── N Orders
-Orders 1 ──── N OrderItems
-Products 1 ──── N OrderItems
-Products N ──── 1 Categories
-Products N ──── 1 Brands
-Users 1 ──── N Cart
-Products 1 ──── N Cart
+Users       1 ──── N Orders
+Orders      1 ──── N OrderItems
+Products    1 ──── N OrderItems
+Products    N ──── 1 Categories
+Products    N ──── 1 Brands
+Users       1 ──── N Cart
+Products    1 ──── N Cart
 
 ```
 
 ---
 
-# ⚙️ Setup & Installation
+# Setup and Installation
 
-## 1️⃣ Clone the Repository
+## 1. Clone the Repository
 
 ```
 
@@ -239,7 +232,7 @@ git clone [https://github.com/Srinidhi945/HCL_Hackathon_code_catalyst.git](https
 
 ```
 
-Navigate to project folder:
+Navigate to the project directory:
 
 ```
 
@@ -249,9 +242,9 @@ cd HCL_Hackathon_code_catalyst
 
 ---
 
-# 🖥 Running the Backend
+# Running the Backend
 
-Navigate to backend directory:
+Navigate to the backend directory:
 
 ```
 
@@ -259,7 +252,7 @@ cd order_nest
 
 ```
 
-Run Spring Boot application:
+Run the Spring Boot application:
 
 ```
 
@@ -267,7 +260,7 @@ Run Spring Boot application:
 
 ```
 
-Backend will start at:
+Backend server:
 
 ```
 
@@ -285,9 +278,9 @@ Swagger API documentation:
 
 ---
 
-# 🌐 Running the Frontend
+# Running the Frontend
 
-Navigate to frontend folder:
+Navigate to the frontend directory:
 
 ```
 
@@ -303,7 +296,7 @@ npm install
 
 ```
 
-Run React application:
+Start the application:
 
 ```
 
@@ -311,7 +304,7 @@ npm start
 
 ```
 
-Frontend runs at:
+Frontend server:
 
 ```
 
@@ -321,44 +314,42 @@ Frontend runs at:
 
 ---
 
-# 📊 Core Functionalities Delivered
+# Core Functionalities Delivered
 
-✔ Centralized portal for **brands, categories, and products**  
-✔ Menu browsing, cart, and order placement  
-✔ Automatic inventory updates upon order confirmation  
-✔ Role-based authentication (Customer / Manager)  
-✔ REST APIs validated using Swagger  
-✔ Code maintained and version controlled in GitHub
-
----
-
-# 🔮 Stretch Features Implemented
-
-- Order history
-- Quick reorder functionality
-- Manager analytics dashboard
-- Inventory management
+- Centralized portal for brands, categories, and products  
+- Menu browsing, cart management, and order placement  
+- Automatic inventory updates after order confirmation  
+- Role-based authentication (Customer / Manager)  
+- REST APIs documented using Swagger  
+- Version-controlled codebase using GitHub  
 
 ---
 
-# 👨‍💻 Contributors
+# Additional Features
 
-- **Harshith Rao**
-- **Rakesh Mayakoti**
-- **Hemanth Guntikadi**
-- **Srinidhi Poreddy**
+- Order history tracking  
+- Quick reorder functionality  
+- Manager analytics dashboard  
+- Inventory management  
 
 ---
 
-# 🎥 Demo
+# Contributors
+
+- Harshith Rao  
+- Rakesh Mayakoti  
+- Hemanth Guntikadi  
+- Srinidhi Poreddy  
+
+---
+
+# Demo
 
 A demo video of the application will be added here.
 
 ---
 
-# 📜 License
+# License
 
 This project was developed as part of the **HCL Hackathon – Code Catalyst**.
 ```
-
-
