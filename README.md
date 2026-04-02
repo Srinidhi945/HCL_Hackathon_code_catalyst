@@ -1,4 +1,3 @@
-```markdown
 # OrderNest – Retail Ordering Platform
 
 OrderNest is a full-stack retail ordering platform developed for the **HCL Hackathon – Code Catalyst**.
@@ -7,7 +6,7 @@ The platform enables customers to browse menu items, place orders, and manage th
 
 ---
 
-# Problem Statement
+## Problem Statement
 
 **Retail Ordering Website**
 
@@ -22,9 +21,9 @@ The system should provide:
 
 ---
 
-# Features
+## Features
 
-## Customer Features
+### Customer Features
 
 - User registration and authentication  
 - Browse menu items by categories  
@@ -39,7 +38,7 @@ The system should provide:
 
 ---
 
-## Manager / Admin Features
+### Manager / Admin Features
 
 - Manager login with role-based access  
 - Dashboard analytics displaying:
@@ -48,29 +47,28 @@ The system should provide:
   - Total products  
   - Total categories  
 
-### Product Management
+#### Product Management
 - Add products  
 - Delete products  
 - Manage product inventory  
 
-### Brand Management
+#### Brand Management
 - Add brands  
 - Delete brands  
 
-### Category Management
+#### Category Management
 - Add categories  
 - Delete categories  
 
-### Order Monitoring
+#### Order Monitoring
 - View all orders  
 - Orders sorted by latest  
 - View order item details  
 
 ---
 
-# System Architecture
+## System Architecture
 
-```
 
 Frontend (React)
 ↓
@@ -80,51 +78,48 @@ Backend (Spring Boot)
 ↓
 Database (MySQL)
 
-```
 
 ---
 
-# Technology Stack
+## Technology Stack
 
-## Frontend
+### Frontend
 - React.js  
 - Axios  
 - React Router  
 - Custom CSS  
 
-## Backend
+### Backend
 - Spring Boot  
 - REST APIs  
 - Maven  
 
-## Database
+### Database
 - MySQL  
 
-## Tools
+### Tools
 - Swagger (API documentation)  
-- GitHub (version control)
+- GitHub (Version control)
 
 ---
 
-# Project Structure
+## Project Structure
 
-```
 
 HCL_Hackathon_code_catalyst
 │
-├── ordernest-ui      # React frontend
-├── order_nest        # Spring Boot backend
+├── ordernest-ui # React Frontend
+├── order_nest # Spring Boot Backend
 └── README.md
 
-```
 
 ---
 
-# Database Schema
+## Database Schema
 
 The application uses **MySQL** for persistent data storage.
 
-## Users Table
+### Users Table
 
 | Column | Type | Description |
 |------|------|-------------|
@@ -138,7 +133,7 @@ The application uses **MySQL** for persistent data storage.
 
 ---
 
-## Categories Table
+### Categories Table
 
 | Column | Type | Description |
 |------|------|-------------|
@@ -147,7 +142,7 @@ The application uses **MySQL** for persistent data storage.
 
 ---
 
-## Brands Table
+### Brands Table
 
 | Column | Type | Description |
 |------|------|-------------|
@@ -156,7 +151,7 @@ The application uses **MySQL** for persistent data storage.
 
 ---
 
-## Products Table
+### Products Table
 
 | Column | Type | Description |
 |------|------|-------------|
@@ -166,41 +161,41 @@ The application uses **MySQL** for persistent data storage.
 | stock | INT | Available inventory |
 | food_type | VARCHAR | VEG / NON_VEG |
 | rating | DOUBLE | Product rating |
-| category_id | BIGINT | FK → categories |
-| brand_id | BIGINT | FK → brands |
+| category_id | BIGINT | Foreign key referencing Categories |
+| brand_id | BIGINT | Foreign key referencing Brands |
 
 ---
 
-## Cart Table
+### Cart Table
 
 | Column | Type | Description |
 |------|------|-------------|
 | id | BIGINT | Primary key |
-| user_id | BIGINT | FK → users |
-| product_id | BIGINT | FK → products |
+| user_id | BIGINT | Foreign key referencing Users |
+| product_id | BIGINT | Foreign key referencing Products |
 | quantity | INT | Quantity in cart |
 
 ---
 
-## Orders Table
+### Orders Table
 
 | Column | Type | Description |
 |------|------|-------------|
 | id | BIGINT | Primary key |
-| user_id | BIGINT | FK → users |
+| user_id | BIGINT | Foreign key referencing Users |
 | total_price | DOUBLE | Total order price |
 | status | VARCHAR | Order status |
 | created_at | TIMESTAMP | Order timestamp |
 
 ---
 
-## Order Items Table
+### Order Items Table
 
 | Column | Type | Description |
 |------|------|-------------|
 | id | BIGINT | Primary key |
-| order_id | BIGINT | FK → orders |
-| product_id | BIGINT | FK → products |
+| order_id | BIGINT | Foreign key referencing Orders |
+| product_id | BIGINT | Foreign key referencing Products |
 | quantity | INT | Quantity ordered |
 | price | DOUBLE | Product price |
 
@@ -208,113 +203,91 @@ The application uses **MySQL** for persistent data storage.
 
 ## Entity Relationships
 
-```
 
-Users       1 ──── N Orders
-Orders      1 ──── N OrderItems
-Products    1 ──── N OrderItems
-Products    N ──── 1 Categories
-Products    N ──── 1 Brands
-Users       1 ──── N Cart
-Products    1 ──── N Cart
+Users 1 ──── N Orders
+Orders 1 ──── N OrderItems
+Products 1 ──── N OrderItems
+Products N ──── 1 Categories
+Products N ──── 1 Brands
+Users 1 ──── N Cart
+Products 1 ──── N Cart
 
-```
 
 ---
 
-# Setup and Installation
+## Setup and Installation
 
-## 1. Clone the Repository
+### Clone the Repository
 
-```
 
-git clone [https://github.com/Srinidhi945/HCL_Hackathon_code_catalyst.git](https://github.com/Srinidhi945/HCL_Hackathon_code_catalyst.git)
+git clone https://github.com/Srinidhi945/HCL_Hackathon_code_catalyst.git
 
-```
 
 Navigate to the project directory:
 
-```
 
 cd HCL_Hackathon_code_catalyst
 
-```
 
 ---
 
-# Running the Backend
+## Running the Backend
 
-Navigate to the backend directory:
+Navigate to the backend folder:
 
-```
 
 cd order_nest
 
-```
 
 Run the Spring Boot application:
 
-```
 
 ./mvnw spring-boot:run
 
-```
 
-Backend server:
+Backend will start at:
 
-```
 
-[http://localhost:8080](http://localhost:8080)
+http://localhost:8080
 
-```
 
 Swagger API documentation:
 
-```
 
-[http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+http://localhost:8080/swagger-ui/index.html
 
-```
 
 ---
 
-# Running the Frontend
+## Running the Frontend
 
-Navigate to the frontend directory:
+Navigate to the frontend folder:
 
-```
 
 cd ordernest-ui
 
-```
 
 Install dependencies:
 
-```
 
 npm install
 
-```
 
-Start the application:
+Run the application:
 
-```
 
 npm start
 
-```
 
-Frontend server:
+Frontend will start at:
 
-```
 
-[http://localhost:3000](http://localhost:3000)
+http://localhost:3000
 
-```
 
 ---
 
-# Core Functionalities Delivered
+## Core Functionalities Delivered
 
 - Centralized portal for brands, categories, and products  
 - Menu browsing, cart management, and order placement  
@@ -325,7 +298,7 @@ Frontend server:
 
 ---
 
-# Additional Features
+## Additional Features
 
 - Order history tracking  
 - Quick reorder functionality  
@@ -334,7 +307,7 @@ Frontend server:
 
 ---
 
-# Contributors
+## Contributors
 
 - Harshith Rao  
 - Rakesh Mayakoti  
@@ -343,13 +316,12 @@ Frontend server:
 
 ---
 
-# Demo
+## Demo
 
 A demo video of the application will be added here.
 
 ---
 
-# License
+## License
 
 This project was developed as part of the **HCL Hackathon – Code Catalyst**.
-```
