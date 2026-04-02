@@ -1,4 +1,4 @@
-````markdown
+
 # OrderNest – Retail Ordering Platform
 
 OrderNest is a full-stack retail ordering platform developed for the **HCL Hackathon – Code Catalyst**.
