@@ -305,10 +305,28 @@ Frontend will start at:
 
 ---
 
+# Demo
+
+A demonstration video of the application is available in the **docs** folder.
+
+Path:
+
+Docs/demo_video.mp4
+
+The video showcases:
+
+- User login and browsing products
+- Adding items to cart
+- Placing an order
+- Manager dashboard functionality
+- Product and category management
+
+---
+
 # Contributors
 
 * Harshith Rao
 * Rakesh Mayakoti
 * Hemanth Guntikadi
 * Srinidhi Poreddy
-
+---
