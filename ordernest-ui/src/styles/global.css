@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@import "./variables.css";
+@import "./theme.css";
+@import "./animations.css";
+@import "./cards.css";
+@import "./navbar.css";
+@import "./hero.css";
+@import "./forms.css";
+@import "./dashboard.css";
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+background:transparent;
+color:#0f172a;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px;
+}
+
+.landing-buttons{
+
+margin-top:20px;
+
+display:flex;
+
+gap:10px;
+
+justify-content:center;
+
+}
+@keyframes slideInCart {
+
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}

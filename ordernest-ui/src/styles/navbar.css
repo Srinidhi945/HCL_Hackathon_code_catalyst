@@ -1,0 +1,93 @@
+/* ================= NAVBAR CONTAINER ================= */
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:18px 40px;
+
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.75);
+
+border-bottom:1px solid rgba(0,0,0,0.05);
+
+position:sticky;
+top:0;
+
+z-index:1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+font-size:26px;
+font-weight:700;
+cursor:pointer;
+
+background:linear-gradient(135deg,#7C3AED,#06B6D4);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* ================= CENTER NAV (SHOP / ORDERS / CART) ================= */
+
+.nav-center{
+display:flex;
+align-items:center;
+gap:32px;
+
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+}
+
+.nav-center a{
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+transition:0.25s;
+}
+
+.nav-center a:hover{
+color:#7C3AED;
+}
+
+/* ================= RIGHT SIDE (HI USER + PROFILE) ================= */
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+/* ================= GREETING ================= */
+
+.nav-greeting{
+font-weight:500;
+color:#334155;
+font-size:14px;
+}
+
+/* ================= CART BUTTON ================= */
+
+.cart-btn{
+padding:8px 18px;
+border-radius:8px;
+border:none;
+
+background:linear-gradient(135deg,#7C3AED,#06B6D4);
+color:white;
+
+cursor:pointer;
+
+font-weight:500;
+
+transition:0.25s;
+}
+
+.cart-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
