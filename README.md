@@ -1,4 +1,3 @@
-
 ```markdown
 # OrderNest – Retail Ordering Platform
 
@@ -354,6 +353,3 @@ A demo video of the application will be added here.
 
 This project was developed as part of the **HCL Hackathon – Code Catalyst**.
 ```
-
-
-If you want, I can also show you **2 small sections that instantly make your README look like a top GitHub project** (most hackathon teams forget them but judges notice immediately).
