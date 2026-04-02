@@ -312,14 +312,3 @@ Frontend will start at:
 * Hemanth Guntikadi
 * Srinidhi Poreddy
 
----
-
-# Demo
-
-A demo video of the application will be added here.
-
----
-
-# License
-
-This project was developed as part of the **HCL Hackathon – Code Catalyst**.
