@@ -1,0 +1,62 @@
+Basic Idea of the Project
+
+Web application for browsing retail products and placing orders
+Products organized by brand and category
+Customers can view products and place orders
+Managers can add, update, or delete products
+Orders are stored in a database
+Demonstrates full-stack architecture with frontend, backend, and database
+
+
+ Tech Stack
+
+Backend
+Spring Boot
+Java
+Spring Web
+Spring Data JPA
+Lombok
+
+Purpose:
+
+Build REST APIs
+Handle business logic
+Connect to database
+Database
+MySQL
+
+Purpose:
+
+Store product data
+Store order details
+
+Frontend
+React
+
+Purpose:
+
+Display products
+Allow users to place orders
+Provide simple admin interface
+
+API Testing
+Postman
+
+Purpose:
+
+Test backend APIs
+
+Version Control
+GitHub
+
+Purpose:
+
+Store project code
+Collaboration during hackathon
+
+ Short System Flow
+
+Product Setup (Manager)
+Manager adds products
+Product details stored in database
+Products available for customers to view

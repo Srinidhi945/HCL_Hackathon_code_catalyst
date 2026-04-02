@@ -1,0 +1,385 @@
+OrderNest Project Explanation
+HCL Hackathon – Code Catalyst
+
+---
+
+1. PROJECT OVERVIEW
+
+OrderNest is a full-stack retail ordering application.
+
+It allows users to:
+
+* Browse food items like Pizza, Cold Drinks, and Breads
+* Add items to a cart
+* Place orders
+* View order history
+
+It also allows managers/admins to:
+
+* Manage products
+* Manage categories
+* Manage brands
+* View incoming orders
+* Monitor business analytics
+
+The project has two main parts:
+
+1. Frontend (User Interface)
+2. Backend (Server and Business Logic)
+
+The frontend is built using React.
+The backend is built using Spring Boot.
+The database used is MySQL.
+
+---
+
+2. HIGH LEVEL SYSTEM FLOW
+
+The application works in the following way:
+
+User → React Frontend → REST API → Spring Boot Backend → MySQL Database
+
+Explanation:
+
+1. The user interacts with the website (React frontend).
+2. React sends requests to backend APIs.
+3. Spring Boot processes the request.
+4. The backend interacts with the MySQL database.
+5. Data is returned back to the frontend.
+6. The frontend displays the results to the user.
+
+---
+
+3. PROJECT STRUCTURE
+
+The project contains two main folders.
+
+ordernest-ui
+This is the React frontend.
+
+order_nest
+This is the Spring Boot backend.
+
+README.md
+Documentation explaining the project.
+
+---
+
+4. FRONTEND (REACT) EXPLANATION
+
+The frontend is responsible for:
+
+* Displaying UI
+* Showing products
+* Handling user actions
+* Calling backend APIs
+
+Typical frontend components include:
+
+Navbar
+Contains navigation links such as home, cart, login.
+
+Product Cards
+Displays food items with image, price, and add-to-cart button.
+
+Cart Drawer
+Shows items added to the cart.
+
+Login / Signup Pages
+Handles user authentication.
+
+Order History Page
+Displays previous orders placed by the user.
+
+---
+
+5. FRONTEND FLOW
+
+When a user opens the website:
+
+Step 1
+React loads the main application.
+
+Step 2
+React requests product data from the backend.
+
+Step 3
+Backend returns a list of products.
+
+Step 4
+React displays products as cards.
+
+Example:
+
+User clicks "Add to Cart"
+
+React sends request:
+
+POST /api/cart
+
+Backend adds item to cart table.
+
+Cart UI updates.
+
+---
+
+6. BACKEND (SPRING BOOT) EXPLANATION
+
+Spring Boot handles:
+
+* API endpoints
+* Business logic
+* Database communication
+* Authentication
+* Order processing
+
+The backend follows a layered architecture.
+
+Controller Layer
+Handles incoming API requests.
+
+Service Layer
+Contains business logic.
+
+Repository Layer
+Communicates with the database.
+
+Entity Layer
+Represents database tables.
+
+---
+
+7. BACKEND FOLDER STRUCTURE
+
+Controllers
+Handles API endpoints.
+
+Example:
+ProductController
+OrderController
+UserController
+
+Services
+Contains business logic.
+
+Example:
+ProductService
+OrderService
+UserService
+
+Repositories
+Handles database queries using JPA.
+
+Example:
+ProductRepository
+OrderRepository
+UserRepository
+
+Entities
+Represents database tables.
+
+Example:
+Product
+Order
+User
+Cart
+Category
+Brand
+
+---
+
+8. API FLOW EXAMPLE
+
+Example: Fetch Products
+
+Step 1
+React sends request:
+
+GET /api/products
+
+Step 2
+ProductController receives request.
+
+Step 3
+ProductController calls ProductService.
+
+Step 4
+ProductService asks ProductRepository for data.
+
+Step 5
+ProductRepository queries the database.
+
+Step 6
+Database returns product data.
+
+Step 7
+Data is sent back to React.
+
+Step 8
+React displays product cards.
+
+---
+
+9. DATABASE STRUCTURE
+
+The database stores all persistent data.
+
+Important tables include:
+
+Users
+Stores user information.
+
+Products
+Stores food items.
+
+Categories
+Groups products (Pizza, Drinks, Bread).
+
+Brands
+Stores brand information.
+
+Cart
+Stores temporary items selected by user.
+
+Orders
+Stores completed orders.
+
+OrderItems
+Stores items within each order.
+
+---
+
+10. ORDER PROCESSING FLOW
+
+Step 1
+User adds items to cart.
+
+Step 2
+Cart table stores selected items.
+
+Step 3
+User clicks "Place Order".
+
+Step 4
+Backend creates a new order.
+
+Step 5
+OrderItems are created for each product.
+
+Step 6
+Product inventory is updated.
+
+Step 7
+Order confirmation is returned to frontend.
+
+---
+
+11. ADMIN / MANAGER FUNCTIONS
+
+Admin users can:
+
+Add products
+Delete products
+Manage categories
+Manage brands
+View all orders
+Monitor business analytics
+
+These features are available in the admin dashboard.
+
+---
+
+12. SECURITY
+
+User authentication is implemented.
+
+Users must log in to:
+
+Place orders
+View order history
+Access profile information
+
+Admin users have special permissions to manage products and orders.
+
+---
+
+13. KEY TECHNOLOGIES USED
+
+Frontend
+
+React.js
+Used to build the user interface.
+
+Axios
+Used to call backend APIs.
+
+React Router
+Handles page navigation.
+
+---
+
+Backend
+
+Spring Boot
+Java framework used to build REST APIs.
+
+Spring Data JPA
+Handles database communication.
+
+Maven
+Build tool used to manage dependencies.
+
+---
+
+Database
+
+MySQL
+Stores all application data.
+
+---
+
+14. HOW TO RUN THE PROJECT
+
+Backend
+
+Navigate to backend folder.
+
+Run:
+
+./mvnw spring-boot:run
+
+Backend runs on:
+
+[http://localhost:8080](http://localhost:8080)
+
+---
+
+Frontend
+
+Navigate to frontend folder.
+
+Install dependencies:
+
+npm install
+
+Start application:
+
+npm start
+
+Frontend runs on:
+
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+15. SUMMARY
+
+OrderNest is a complete full-stack retail ordering platform.
+
+The frontend built with React provides a user-friendly interface.
+The backend built with Spring Boot handles business logic and APIs.
+MySQL stores all persistent data.
+
+Together, these components create a scalable and efficient retail ordering system.
+
+.................................................................................................
